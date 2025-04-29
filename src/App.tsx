@@ -131,92 +131,92 @@ const WORLD_TIMEZONE_MARKERS = [
     name: "Europe/Kaliningrad",
     lat: 54.7104,
     lng: 20.4522,
-    label: "Kaliningrad"
+    label: "Kaliningrad",
   },
   {
     name: "Europe/Moscow",
     lat: 55.7558,
     lng: 37.6173,
-    label: "Moscow"
+    label: "Moscow",
   },
   {
     name: "Europe/Samara",
     lat: 53.1959,
     lng: 50.1008,
-    label: "Samara"
+    label: "Samara",
   },
   {
     name: "Asia/Yekaterinburg",
     lat: 56.8389,
     lng: 60.6057,
-    label: "Yekaterinburg"
+    label: "Yekaterinburg",
   },
   {
     name: "Asia/Omsk",
     lat: 54.9914,
     lng: 73.3645,
-    label: "Omsk"
+    label: "Omsk",
   },
   {
     name: "Asia/Novosibirsk",
     lat: 55.0084,
     lng: 82.9357,
-    label: "Novosibirsk"
+    label: "Novosibirsk",
   },
   {
     name: "Asia/Krasnoyarsk",
     lat: 56.0153,
     lng: 92.8932,
-    label: "Krasnoyarsk"
+    label: "Krasnoyarsk",
   },
   {
     name: "Asia/Irkutsk",
     lat: 52.2869,
     lng: 104.305,
-    label: "Irkutsk"
+    label: "Irkutsk",
   },
   {
     name: "Asia/Yakutsk",
     lat: 62.0355,
     lng: 129.6755,
-    label: "Yakutsk"
+    label: "Yakutsk",
   },
   {
     name: "Asia/Vladivostok",
     lat: 43.1198,
     lng: 131.8869,
-    label: "Vladivostok"
+    label: "Vladivostok",
   },
   {
     name: "Asia/Magadan",
     lat: 59.561,
     lng: 150.8106,
-    label: "Magadan"
+    label: "Magadan",
   },
   {
     name: "Asia/Kamchatka",
     lat: 53.0452,
     lng: 158.6483,
-    label: "Kamchatka"
+    label: "Kamchatka",
   },
   {
     name: "Asia/Anadyr",
     lat: 64.7337,
     lng: 177.5089,
-    label: "Anadyr"
-  }
+    label: "Anadyr",
+  },
 ];
 
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="sticky top-0 z-10 bg-white/80 backdrop-blur-sm p-4 flex justify-between items-center border-b">
+      <header className="sticky top-0 z-[1000] bg-white/80 backdrop-blur-sm p-4 flex justify-between items-center border-b">
         <h2 className="text-xl font-semibold accent-text">
           Timezone Converter
         </h2>
         <SignOutButton />
       </header>
-      <main className="flex-1 flex items-center justify-center p-8">
+      <main className="flex-1 flex items-center justify-center p-8 overflow-hidden">
         <div className="w-full max-w-4xl mx-auto">
           <Content />
         </div>
