@@ -8,6 +8,7 @@ const applicationTables = {
     fromTimezone: v.string(),
     toTimezone: v.string(),
     timestamp: v.number(),
+    clock: v.optional(v.string()), // Made clock field optional
   }).index("by_user", ["userId"]),
 };
 
