@@ -126,6 +126,85 @@ const WORLD_TIMEZONE_MARKERS = [
     lng: 28.0473,
     label: "Johannesburg",
   },
+  // Russia
+  {
+    name: "Europe/Kaliningrad",
+    lat: 54.7104,
+    lng: 20.4522,
+    label: "Kaliningrad"
+  },
+  {
+    name: "Europe/Moscow",
+    lat: 55.7558,
+    lng: 37.6173,
+    label: "Moscow"
+  },
+  {
+    name: "Europe/Samara",
+    lat: 53.1959,
+    lng: 50.1008,
+    label: "Samara"
+  },
+  {
+    name: "Asia/Yekaterinburg",
+    lat: 56.8389,
+    lng: 60.6057,
+    label: "Yekaterinburg"
+  },
+  {
+    name: "Asia/Omsk",
+    lat: 54.9914,
+    lng: 73.3645,
+    label: "Omsk"
+  },
+  {
+    name: "Asia/Novosibirsk",
+    lat: 55.0084,
+    lng: 82.9357,
+    label: "Novosibirsk"
+  },
+  {
+    name: "Asia/Krasnoyarsk",
+    lat: 56.0153,
+    lng: 92.8932,
+    label: "Krasnoyarsk"
+  },
+  {
+    name: "Asia/Irkutsk",
+    lat: 52.2869,
+    lng: 104.305,
+    label: "Irkutsk"
+  },
+  {
+    name: "Asia/Yakutsk",
+    lat: 62.0355,
+    lng: 129.6755,
+    label: "Yakutsk"
+  },
+  {
+    name: "Asia/Vladivostok",
+    lat: 43.1198,
+    lng: 131.8869,
+    label: "Vladivostok"
+  },
+  {
+    name: "Asia/Magadan",
+    lat: 59.561,
+    lng: 150.8106,
+    label: "Magadan"
+  },
+  {
+    name: "Asia/Kamchatka",
+    lat: 53.0452,
+    lng: 158.6483,
+    label: "Kamchatka"
+  },
+  {
+    name: "Asia/Anadyr",
+    lat: 64.7337,
+    lng: 177.5089,
+    label: "Anadyr"
+  }
 ];
 
 export default function App() {
@@ -315,16 +394,18 @@ function Content() {
             </button>
           </div>
 
-          <button
-            onClick={() => {
-              const temp = fromTimezone;
-              setFromTimezone(toTimezone);
-              setToTimezone(temp);
-            }}
-            className="mt-4 w-full bg-gray-600 text-white py-2 px-4 rounded hover:bg-gray-700"
-          >
-            Flip Timezones
-          </button>
+          <div className="flex justify-center mt-4">
+            <button
+              onClick={() => {
+                const temp = fromTimezone;
+                setFromTimezone(toTimezone);
+                setToTimezone(temp);
+              }}
+              className="text-sm bg-gray-300 text-gray-700 py-1 px-2 rounded hover:bg-gray-400"
+            >
+              Flip Timezones
+            </button>
+          </div>
           {errorMessage && (
             <div className="text-red-500 text-sm text-center mt-2">
               {errorMessage}
@@ -381,6 +462,13 @@ function Content() {
                           updatedTimestamp.getTime();
                       }}
                     />
+                    <p className="text-lg">
+                      {formatInTimeZone(
+                        new Date(conv.timestamp),
+                        conv.fromTimezone,
+                        "HH:mm:ss zzz"
+                      )}
+                    </p>
                     <p className="text-sm text-gray-600">
                       {formatInTimeZone(
                         new Date(conv.timestamp),
