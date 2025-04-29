@@ -94,6 +94,36 @@ const WORLD_TIMEZONE_MARKERS = [
     lng: -58.3816,
     label: "Buenos Aires",
   },
+  {
+    name: "America/Toronto",
+    lat: 43.65107,
+    lng: -79.347015,
+    label: "Toronto (ET)"
+  },
+  {
+    name: "America/Winnipeg",
+    lat: 49.8951,
+    lng: -97.1384,
+    label: "Winnipeg (CT)"
+  },
+  {
+    name: "America/Edmonton",
+    lat: 53.5461,
+    lng: -113.4938,
+    label: "Edmonton (MT)"
+  },
+  {
+    name: "America/Vancouver",
+    lat: 49.2827,
+    lng: -123.1207,
+    label: "Vancouver (PT)"
+  },
+  {
+    name: "America/St_Johns",
+    lat: 47.5615,
+    lng: -52.7126,
+    label: "St. John's (NT)"
+  },
   // Europe
   { name: "Europe/London", lat: 51.5074, lng: -0.1278, label: "London" },
   { name: "Europe/Paris", lat: 48.8566, lng: 2.3522, label: "Paris" },
